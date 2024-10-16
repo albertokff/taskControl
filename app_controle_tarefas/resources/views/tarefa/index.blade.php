@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Tarefas<a href="{{ route('tarefa.create') }}" class="btn btn-success float-end">Adicionar</a></div>
+                <div class="card-header">Tarefas
+                    <a href="{{ route('tarefa.exportacao') }}" class="btn btn-success float-end">XLSX</a>
+                    <a href="{{ route('tarefa.create') }}" class="btn btn-warning float-end" style="margin-right: 10px">Adicionar</a>
+                </div>
 
                 <div class="card-body">
                     <table class="table table-striped">
