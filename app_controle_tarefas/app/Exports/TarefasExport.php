@@ -12,6 +12,7 @@ class TarefasExport implements FromCollection
     */
     public function collection()
     {
-        return Tarefa::all();
+        // return Tarefa::all();
+        return Tarefa::where('user_id', auth()->user()->id)->get();
     }
 }
