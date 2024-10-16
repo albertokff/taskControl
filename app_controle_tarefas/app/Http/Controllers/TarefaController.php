@@ -98,12 +98,8 @@ class TarefaController extends Controller
 
     public function exportacao($extensao)
     {
-        if ($extensao == 'xlsx') {
-            return Excel::download(new TarefasExport, 'tarefas.xlsx');
-        } else if ($extensao == 'csv') {
-            return Excel::download(new TarefasExport, 'tarefas.csv');
-        } else {
-            return redirect()->route('tareas.index');
-        }        
+        if (in_array($extensao, ['xlsx', 'xls', 'csv', 'dompdf'])) {
+            return Excel::download(new TarefasExport, 'tarefas.' . $extensao);
+        }
     }
 }
