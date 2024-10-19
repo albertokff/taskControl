@@ -8,7 +8,8 @@
                 <div class="card-header">Tarefas
                     <a href="{{ route('tarefa.exportacao', ['extensao' => 'xlsx']) }}" class="btn btn-success float-end">XLSX</a>
                     <a href="{{ route('tarefa.exportacao', ['extensao' => 'csv']) }}" class="btn btn-danger float-end" style="margin-right: 10px">CSV</a>
-                    <a href="{{ route('tarefa.exportacao', ['extensao' => 'pdf']) }}" class="btn btn-info float-end" style="margin-right: 10px">PDF</a>
+                    {{-- <a href="{{ route('tarefa.exportacao', ['extensao' => 'pdf']) }}" class="btn btn-info float-end" style="margin-right: 10px">PDF</a> --}}
+                    <a href="{{ route('tarefa.exportar') }}" target="_blank" class="btn btn-info float-end" style="margin-right: 10px">PDF v2</a>
                     <a href="{{ route('tarefa.create') }}" class="btn btn-warning float-end" style="margin-right: 10px">Adicionar</a>
                 </div>
 
